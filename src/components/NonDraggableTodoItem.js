@@ -18,7 +18,8 @@ const NonDraggableTodoItem = ({ id, text, completed, index }) => {
         height: 40,
         display: "flex",
         alignItems: "center",
-        justifyContent: "flext-start"
+        justifyContent: "flext-start",
+       width:400
       }}
     >
       <h6>
