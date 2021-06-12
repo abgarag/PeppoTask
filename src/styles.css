@@ -1,0 +1,41 @@
+.main {
+  font-family: sans-serif;
+  padding: 25px;
+  display: flex-column;
+  justify-content: center;
+}
+
+input::placeholder {
+  color: #00b2d4 !important;
+}
+input {
+  outline: none;
+  border: none;
+}
+.sortButton,
+.AddTodo {
+  color: white;
+  background-color: #0082d4;
+  outline: none;
+  border: none;
+  margin-left: 5px;
+  height: 40px;
+  width: 100px;
+}
+.disabled {
+  opacity: 0.7;
+}
+
+.grids {
+  flex: 1;
+  height: 70vh;
+  overflow-y: auto;
+  /* box-shadow: 0 0 0.4rem #666; */
+  padding: 15px;
+}
+h5 {
+  color: #8b9da7;
+}
+h3 {
+  color: #444444;
+}
