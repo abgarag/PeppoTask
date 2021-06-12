@@ -5,6 +5,7 @@ import AddBlue from "../assets/add-blue.svg";
 import AddGrey from "../assets/add-gray.svg";
 const TodoInput = () => {
   const [text, setText] = useState("");
+  const [disabled, setdisabled] = useState(true);
   const { list } = useSelector((state) => state.todos);
 
   const dispatch = useDispatch();
@@ -52,14 +53,24 @@ const TodoInput = () => {
             placeholder="Add a Todo"
             name="todo"
             value={text}
-            onChange={(event) => setText(event.target.value)}
+            onChange={(event) => {
+              setText(event.target.value);
+              if (
+                event.target.value.length > 20 ||
+                event.target.value.length === 0
+              ) {
+                setdisabled(true);
+              } else {
+                setdisabled(false);
+              }
+            }}
           />
         </form>
       </div>
       <button
         type="submit"
-        className={`AddTodo${text.length !== 0 ? "" : " disabled"}`}
-        disabled={text.length > 20 || text.length === 0 ? true : false}
+        className={`AddTodo${!disabled ? "" : " disabled"}`}
+        disabled={disabled ? true : false}
         onClick={handleSubmit}
       >
         Add
