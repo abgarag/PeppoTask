@@ -25,7 +25,8 @@ const TodoItem = ({ id, text, index }) => {
             height: 40,
             display: "flex",
             alignItems: "center",
-            justifyContent: "flex-start"
+            justifyContent: "flex-start",
+            width:400
           }}
         >
           <div>
