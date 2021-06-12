@@ -11,7 +11,7 @@ const TodoInput = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
-    if (text !== "" || text < 21) {
+    if (text !== "" || text.length < 21) {
       dispatch(addTodo(text));
       setText("");
     } else {
